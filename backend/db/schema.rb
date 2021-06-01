@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_05_31_161404) do
 
   create_table "pizzas", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.integer "price"
     t.string "description"
     t.integer "topping_id"
