@@ -24,18 +24,16 @@ class Application
 
   elsif req.path.match(/customer/) && req.post? 
     customer_hash = JSON.parse(req.body.read)
-
  
-    filter_customer = Customer.any? do |customer|
+    filter_customer = Customer.select do |customer|
       customer_hash == customer
     end
 
-    if filter_customer
-    new_customer = Customer.create(customer_hash)
-
-    return [201, { 'Content-Type' => 'application/json' }, [ new_customer.display_data ]]
+    if filter_customer.length > 0
+      return [400, {} ["Path Not Found"]]
     else
-    return [400, {}]
+      new_customer = Customer.create(customer_hash)
+    return [201, { 'Content-Type' => 'application/json' }, [ new_customer]]
     end
 
     else
