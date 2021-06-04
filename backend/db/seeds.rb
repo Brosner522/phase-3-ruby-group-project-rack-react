@@ -38,7 +38,7 @@ Pizza.create(name:"Meat Pizza" , price: rand(1..10), description: "If pepperoni 
 topping_id: Topping.ids.sample, image:"https://iamafoodblog.b-cdn.net/wp-content/uploads/2015/10/meatlovers-pizza-8w.jpg")
 
 Pizza.create(name:"Chicago Style" , price: rand(1..10), description: "Our deep dish pizza is made with large amounts of sauce and cheese.", topping_id: Topping.ids.sample,
-image:"https://howtofeedaloon.com/wp-content/uploads/2014/04/deep-dish-intagram.jpg" )
+image:"https://dudethatcookz.com/wp-content/uploads/2018/01/DSC_1222-01.jpeg" )
 
 Pizza.create(name:"Pepperoni Pizza" , price: rand(1..10), description: "There’s a reason this is one of the most popular types of pizza. Who doesn’t love biting into a crispy, salty round of pepperoni?",
  topping_id: Topping.ids.sample, image:"https://www.cookingclassy.com/wp-content/uploads/2014/07/pepperoni-pizza6+srgb..jpg" )
